@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TweenMax</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section>
+        <div class="container">
+            <div class="row">
+                <h1>Freelancing For Tomorrow</h1>
+                <button id="cta">Watch Here</button>
+                <div class="panel">
+                    <i class="far fa-lightbulb" id="light"></i>
+                    <p>Some great line about Freelancing and how we did something everyone will love</p>
+                    <div class="box"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script>
+
+        document.getElementById('cta').addEventListener('click', function () {
+
+            // TweenMax.to('.panel', 1.5, {scaleY: 1, height:'100vh' });
+            // TweenMax.to('#light', 1, {opacity: 1, y: 0, delay: 1, ease: Back.easeOut.config(1.7)});
+            // TweenMax.to('p', 1, {opacity: 1, delay:1.5 });
+            // TweenMax.to('.box', 3, {opacity: 1, });
+
+            gsap.to('.panel', 1.5, {scaleY: 1, height:'100vh', ease: "circ.out" });
+            gsap.to('i', 1, {opacity: 1, y: 0, delay: 1, ease: "back.out(1.7)"});
+            gsap.to('p', 1, {opacity: 1, y: 20, delay: 1.4});
+            gsap.to('.box', 3, {opacity: 1, scale: 1, ease: "elastic.out(1, 0.3)"});
+
+        })
+
+    </script>
+</body>
+
+</html>
